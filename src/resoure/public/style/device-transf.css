@@ -1,0 +1,54 @@
+.main-char {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+}
+.character {
+  width: 50px;
+  height: 50px;
+  background-image: url("https://f8-zpcloud.zdn.vn/3479149934985518530/6da84dd1d79b0ac5538a.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes walk {
+  0% {
+    background-image: url("https://f8-zpcloud.zdn.vn/3479149934985518530/6da84dd1d79b0ac5538a.jpg");
+    transform: translate(-50%, -50%);
+    background-position: top left;
+  }
+  50% {
+    background-image: url("https://f9-zpcloud.zdn.vn/6866554479508157772/61555ae3c3a91ef747b8.jpg");
+    transform: translate(-15%, -50%);
+  }
+  100% {
+    background-image: url("https://f8-zpcloud.zdn.vn/3479149934985518530/6da84dd1d79b0ac5538a.jpg");
+    transform: translate(-50%, -50%);
+    background-position: top right;
+  }
+}
+
+.character {
+  animation-name: walk;
+  animation-duration: 0.8s;
+  animation-timing-function: steps(2.2, end);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.go {
+  width: 50px;
+  height: 50px;
+  animation: moveRight 19s linear infinite;
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(2800%);
+  }
+}

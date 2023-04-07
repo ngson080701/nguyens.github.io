@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+label,
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button[type="submit"] {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

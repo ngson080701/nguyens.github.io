@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Submit</title>
+    <style>
+      form {
+        width: 500px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type='text'],
+      textarea {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      input[type='submit'] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type='submit']:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Thông tin sản phẩm</h2>
+    <form action="./store" method="post">
+      <label for="name">Tên sản phẩm:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+
+      <label for="description">Mô tả:</label>
+      <textarea id="description" name="description"></textarea><br /><br />
+
+      <label for="price">Giá:</label>
+      <input type="text" id="price" name="price" /><br /><br />
+
+      <label for="nameDevice">Tên thiết bị:</label>
+      <input type="text" id="nameDevice" name="nameDevice" /><br /><br />
+      <label for="image">Link anh:</label>
+      <input type="text" id="image" name="image" /><br /><br />
+      <label for="rwVideo">ID youtube:</label>
+      <input type="text" id="rwVideo" name="rwVideo" /><br /><br />
+      <label for="slug">Slug:</label>
+      <input type="text" id="slug" name="slug" /><br /><br />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+</html>

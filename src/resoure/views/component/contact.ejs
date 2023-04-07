@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin cá nhân</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        max-width: 30%;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .contact div {
+        width: calc(50% - 10px);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .contact h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .contact p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .contact a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Thông tin cá nhân</h1>
+      <img
+        src="https://f9-zpcloud.zdn.vn/6866554479508157772/61555ae3c3a91ef747b8.jpg"
+        alt="Avatar"
+      />
+      <p>Tôi là Nguyễn Văn A, tôi đang làm việc tại công ty XYZ.</p>
+      <p>Tôi có kinh nghiệm làm việc trong lĩnh vực ABC và DEF.</p>
+      <div class="contact">
+        <div>
+          <h2>Liên hệ</h2>
+          <p>Email: abc@gmail.com</p>
+          <p>Điện thoại: 0123456789</p>
+        </div>
+        <div>
+          <h2>Mạng xã hội</h2>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">Twitter</a></p>
+          <p><a href="#">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
