@@ -4,7 +4,7 @@
     "description": "",
     "main": "src/index.js",
     "scripts": {
-        "start": "nodemon --inspect src/index.js",
+        "start": "nodemon --inspect src/index.js", //cclslsl
         "watch": "node-sass --watch src/resoure/scss/app.scss src/resoure/public/style/app.css",
         "test": "echo \"Error: no test specified\" && exit 1",
         "beautifull": "prettier --single-quote --trailing-comma all --tab-width 4 --write \"./**/*.{js,json,scss}\" ",
