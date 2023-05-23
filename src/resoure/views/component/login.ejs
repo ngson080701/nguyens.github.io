@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="/public/style/footerstyle.css" />
     <link rel="stylesheet" href="/public/style/headerstyle.css" />
+    <link rel="stylesheet" href="/src/resoure/public/style/login.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -10,36 +11,111 @@
       crossorigin="anonymous"
     />
   </head>
+  <link rel="icon" href="https://www.iconpacks.net/icons/1/free-gear-icon-1213-thumb.png" type="image/x-icon">
+  <title>LOGIN to S-GEAR.VN</title>
   <body>
-    <%- include("../layouts/header.ejs") %>
+    
     <main>
-      <form method="POST">
-        <h1>ĐĂNG NHẬP VỚI SƠN</h1>
-        <div>
-          <label for="username">Username:</label>
-          <input name="usn" type="text" id="username" name="username" />
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input name="passw" type="password" id="password" name="password" />
-        </div>
-        <div>
-          <select name="Sunwin" id="">
-            <option value="">Chọn tài hoặc xỉu</option>
-            <option value="up">Tài</option>
-            <option value="down">Xỉu</option>
-          </select>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      <form method="POST" >
 
-      <!-- <form >
-        <input name="ip1" type="text" placeholder="nhap ip1">
-        <input name="ip2" type="text" placeholder="nhap ip2">
-        <button type="submits"></button>
-      </form> -->
+          <img src="https://huykhangpc.vn/blog/wp-content/uploads/2022/11/Case-ASUS-ROG-Z11-ITX.webp" alt="" class="img-backgr">
+          <p class='pp'>Cửa hàng linh kiện máy tính , build máy tính </p>
+          <p class='ppp'>Computer parts store & computer build </p>
+        <h1 class='middle-btn'>/</h1>
+        
+        <button type="button"  id="openModalBtn" class="btn btn-primary btn-lg lg">LOGIN</button>
+        <button type="button" id="openModalBtnRegis" class="btn btn-primary btn-lg rg">REGISTER</button>
+       <button type="button" id="openModalBtnRegis" class="btn btn-primary btn-lg ck" onclick="window.location.href = '/account-Manager'">Check list account </button>
+          
+
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="login-container"> 
+        <h2>Đăng nhập</h2>
+        <form method='get'>
+          <div class="form-group">
+            <label for="username">Tên người dùng - Username</label>
+            <input type="text" name='username' id="username" placeholder="Nhập tên người dùng" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu - Password</label>
+            <input type="password" name='password' id="password" placeholder="Nhập mật khẩu" required>
+          </div>
+          <button type="submit">Đăng nhập</button>
+        </form>
+        </div>
+                </div>
+        </div>
+
+
+
+        <div id="myModalRegis" class="modalRegis">
+          <div class="modal-content">
+          <span class="closeRegis">&times;</span>
+          <div class="login-containerRegis">
+        <h2>Đăng Ký</h2>
+        <form method="post" action="/login/createAcc">
+          <div class="form-group">
+            <label for="username">Tên người dùng - Username</label>
+            <input type="text" name='username' id="username" placeholder="Nhập tên người dùng" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu - Password</label>
+            <input type="password" name='password' id="password" placeholder="Nhập mật khẩu" required>
+          </div>
+          <button type="submit">Đăng Ký</button>
+        </form>
+        </div>
+                </div>
+        </div>
+
     </main>
-    <%- include("../layouts/footer.ejs") %>
+    
+    <script>
+      // Lấy các phần tử DOM cần sử dụng
+const openModalBtn = document.getElementById('openModalBtn');
+const openModalBtnRegis = document.getElementById('openModalBtnRegis');
+const modal = document.getElementById('myModal');
+const modalRegis = document.getElementById('myModalRegis');
+const closeModalBtn = document.getElementsByClassName('close')[0];
+const closeModalBtnRegis = document.getElementsByClassName('closeRegis')[0];
+
+// Xử lý sự kiện khi nhấn vào nút Mở Modal
+openModalBtn.addEventListener('click', function() {
+  modal.style.display = 'block'; // Hiển thị modal
+});
+openModalBtnRegis.addEventListener('click', function() {
+  modalRegis.style.display = 'block'; // Hiển thị modal
+});
+
+// Xử lý sự kiện khi nhấn vào nút Đóng Modal hoặc bên ngoài modal
+closeModalBtn.addEventListener('click', function() {
+  modal.style.display = 'none'; // Ẩn modal
+});
+closeModalBtnRegis.addEventListener('click', function() {
+  modalRegis.style.display = 'none'; // Ẩn modal
+});
+
+
+
+window.addEventListener('click', function(event) {
+  if (event.target === modalContent) {
+    event.stopPropagation();
+  } else if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target === modalContent) {
+    event.stopPropagation();
+  } else if (event.target === modalRegis) {
+    modalRegis.style.display = 'none';
+  }
+});
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

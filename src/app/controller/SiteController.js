@@ -7,7 +7,7 @@ class SiteController {
         Course.find({})
             .then((courses) => res.render('home', {
                 courses: courses ,
-                title : 'Chao mung cac ban'
+                title : 'Top sản phẩm bán chạy'
             }))
             .catch(next);
 

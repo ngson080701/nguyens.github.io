@@ -54,7 +54,7 @@
   </style>
   </head>
   <body>
-    <h2>Thông tin sản phẩm</h2>
+    <h2>Cập nhật sản phẩm</h2>
     <!-- <form action="./store" method="post">
       <label for="name">Tên sản phẩm:</label>
       <input type="text" id="name" name="name" /><br /><br />
@@ -76,38 +76,38 @@
       <input type="submit" name="submit" value="Submit" />
     </form> -->
 
-    <form id='get' action="./store" method="post">
+    <form id='get' action="/device/<%= device._id %>" method="PUT">
     <label for="product-name">Tên sản phẩm:</label>
-    <input type="text" id="name" name="name" required>
+    <input value='<%= device.name %>' type="text" id="name" name="name" required>
 
     <label for="description">Mô tả:</label>
-    <textarea id="description" name="description" required> </textarea>
+    <textarea id="description" name="description" required><%= device.description %></textarea>
 
     <label for="price">Giá:</label>
-    <input type="number" id="price" name="price" required>
+    <input value='<%= device.price %>' type="number" id="price" name="price" required>
 
     <label for="device-name">Tên thiết bị:</label>
-    <input type="text" id="nameDevice" name="nameDevice"  required>
+    <input value='<%= device.nameDevice %>' type="text" id="nameDevice" name="nameDevice"  required>
 
     <label for="image-link">Link ảnh:</label>
-    <input type="url" id="image" name="image"  required>
+    <input value='<%= device.image %>' type="url" id="image" name="image"  required>
 
     <label for="youtube-id">ID YouTube:</label>
-    <input  type="text" id="rwVideo" name="rwVideo" required>
+    <input value='<%= device.rwVideo %>'  type="text" id="rwVideo" name="rwVideo" required>
 
     <label for="slug">Slug:</label>
-    <input type="text" id="slug" name="slug"  required>
+    <input value='<%= device.slug %>' type="text" id="slug" name="slug"  required>
 
     <input type="submit" id='submit' name="submit" value="Submit" />
   </form>
-  <script>
+  <!-- <script>
   document.querySelector('form').addEventListener('submit', function(event) {
     
     const nameDv = document.getElementById('name');
     const onOff = document.getElementById('get')
 
     
-      const maxLength = 10; // Giới hạn độ dài là 50 ký tự
+      const maxLength = 20; // Giới hạn độ dài là 50 ký tự
       
       if (nameDv.value.length > maxLength ) {
        nameDv.classList.add('error');
@@ -123,7 +123,7 @@
 
     
   });
-</script>
+</script> -->
 
   </body>
 </html>

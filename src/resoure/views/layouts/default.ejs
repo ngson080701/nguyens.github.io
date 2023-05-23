@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,18 +18,9 @@
       .main {
         max-width: 100%;
         display: flex;
-        height: 80vh;
-        overflow: auto;
+        height: auto;
+        overflow: hidden;
         padding-left: 10px;
-      }
-      .fullform {
-        margin: 10px;
-        width: 23%;
-        height: auto;
-      }
-      .card-img-top {
-        height: auto;
-    max-height: 200px;
       }
     </style>
   </head>
@@ -35,7 +28,7 @@
 
 
 
-    <div class="app-container">
+    <div class="app-container" style='height: 100vh'>
   <div class="sidebar">
     <div class="sidebar-header">
       <div class="app-icon">
@@ -139,44 +132,15 @@
         </button>
       </div>
     </div>
-    <div class="products-area-wrapper tableView">
-      <h1 style="color: white;"><%= title %></h1>
+    <!-- <div class="products-area-wrapper tableView">
       
       
+      <h1>Sửa tại default</h1>
       
       
-      <div class="main">
-        <div class="row">
-          <% courses.forEach(function(doc) { %>
-          <div class="fullform" style="display: flex">
-            <div class="card" style="width: 18rem; margin-left: 10px">
-              <img
-                class="card-img-top"
-                src="<%= doc.image %>"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title"><%= doc.name %></h5>
-                <p class="card-text"><%= doc.description %></p>
-                <a href="/devices/<%= doc.slug %>" class="btn btn-primary"
-                  >Xem hàng</a
-                >
-                <a style='margin: 5px' href="/devices/<%= doc._id %>/edit" class="btn btn-info"
-                  >Cập nhật</a
-                >
-                <a style='margin: 5px' href="/devices/<%= doc._id %>/delete" class="btn btn-danger"
-                  >Xóa</a
-                >
-                
-              </div>
-            </div>
-          </div>
-          
-          <% }); %>
-        </div>
-      </div>
+     
       
-    </div>
+    </div> -->
   </div>
 </div>
 

@@ -1,4 +1,6 @@
 const Course = require('../controller/model/Course');
+const mongoose = require('mongoose');
+
 class DevicesController {
     // GET to /DevicesController
     index(req, res , next) {
@@ -29,6 +31,15 @@ class DevicesController {
         // saved!
         res.send('Da them thiet bi')
 });
+    }
+    edit(req, res , next) {
+        Course.findById(req.params.id)
+            .then((courses) => res.render('device-edit', {
+                device: courses
+            }))
+            .catch(next)
+     
+
     }
 
 }

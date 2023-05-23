@@ -1,0 +1,181 @@
+.img-backgr {
+    width: 100%;
+    background-image: url(https://huykhangpc.vn/blog/wp-content/uploads/2022/11/Case-ASUS-ROG-Z11-ITX.webp);
+    height: 100vh;
+    position: relative;
+}
+.btn.btn-primary.rg{
+   position: absolute;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    opacity: 0.5;
+}
+.btn.btn-primary.lg{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 40%;
+     opacity: 0.5;
+}
+.btn.btn-primary.ck{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top: 70%;
+    left: 40%;
+     opacity: 1;
+}
+
+.btn.btn-primary.rg:hover{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+.btn.btn-primary.lg:hover{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top: 50%;
+    left: 40%;
+    opacity: 1;
+}
+.middle-btn {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    top: 49.5%;
+    left: 47.5%;
+    color: white;
+}
+.pp {
+    position: absolute;
+    font-size: 40px;
+    font-family: “Palatino Linotype”, “Book Antiqua”, Palatino, serif;
+    font-style: italic;
+    top: 7%;
+    text-align: center;
+    align-items: center;
+    color: white;
+    left: 50%;
+     transform: translate(-50%, -50%)
+
+}
+
+.ppp{
+    position: absolute;
+    font-size: 20px;
+    font-family: “Palatino Linotype”, “Book Antiqua”, Palatino, serif;
+    font-style: italic;
+    top: 13%;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modalRegis {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 400px;
+}
+
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+.closeRegis {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closeRegis:hover {
+  color: red;
+}
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.login-containerRegis {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
