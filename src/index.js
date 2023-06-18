@@ -1,4 +1,5 @@
 const express = require('express');
+var methodOverride = require('method-override')
 const path = require('path');
 const app = express();
 const port = 2002;
@@ -12,13 +13,19 @@ const MongoClient = mongodb.MongoClient;
 const url = 'mongodb://127.0.0.1/son_productdemo';
 const ObjectId = mongodb.ObjectId;
 const dbName = 'accounts';
-const dm = 'ss';
-//connect database vpppsss asdasfdasdsdfsd 
 
+//connect database vpppsss asdasfdasdsdfsd 
 db.connect();
+
+// app use medthod - override
+app.use(methodOverride('_method'))
+
+
 // app.use(morgan('combined'))
+
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use('/src/resoure/public/style',express.static(path.join(__dirname, 'resoure/public/style')));
+
 // app.use(express.static(path.join(__dirname, 'resoure')));
 app.use(
     express.urlencoded({

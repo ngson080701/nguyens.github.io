@@ -76,7 +76,7 @@
       <input type="submit" name="submit" value="Submit" />
     </form> -->
 
-    <form id='get' action="/device/<%= device._id %>" method="PUT">
+    <form  method='POST' action="/device/<%= device._id %>?_method=PUT">
     <label for="product-name">Tên sản phẩm:</label>
     <input value='<%= device.name %>' type="text" id="name" name="name" required>
 

@@ -41,6 +41,9 @@ class DevicesController {
      
 
     }
+    update(req, res, next) {
+        res.json(req.body)
+    }
 
 }
 
